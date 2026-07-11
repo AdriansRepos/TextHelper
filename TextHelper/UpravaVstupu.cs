@@ -18,19 +18,20 @@
                         return aktualni;
                 }
 
-                Console.Write($"Nový/á {popis}: ");
-
                 while (true)
                 {
+                    Console.Write($"Nový/á {popis}: ");
                     try
                     {
                         string vstup = Console.ReadLine()!.Trim();
                         T novaHodnota = parser(vstup);
                         return novaHodnota;
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        Console.WriteLine("Neplatné zadání, zkuste znovu:");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"Neplatné zadání ({ex.Message}), zkuste znovu:");
+                        Console.ResetColor();
                     }
                 }
             }
