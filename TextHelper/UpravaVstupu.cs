@@ -14,16 +14,21 @@
                 if (!jeNove)
                 {
                     Console.WriteLine($"Aktuální {popis}: {formatter(aktualni)}\nChcete upravit tuto položku? A/N");
-                    if (!Console.ReadLine()!.Equals("A", StringComparison.CurrentCultureIgnoreCase))
+                    
+                    // Bezpečné porovnání: pokud je vráceno null, Equals se nezavolá a vrátí false
+                    string? odpoved = Console.ReadLine();
+                    if (!string.Equals(odpoved, "A", StringComparison.CurrentCultureIgnoreCase))
                         return aktualni;
                 }
-
+    
                 while (true)
                 {
                     Console.Write($"Nový/á {popis}: ");
                     try
                     {
-                        string vstup = Console.ReadLine()!.Trim();
+                        // Bezpečné ošetření null pomocí null-conditional operátoru a koalescence
+                        string vstup = Console.ReadLine()?.Trim() ?? string.Empty;
+                        
                         T novaHodnota = parser(vstup);
                         return novaHodnota;
                     }
@@ -42,4 +47,5 @@
             }
         }
     }
+
 }
