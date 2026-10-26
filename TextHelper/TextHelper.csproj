@@ -6,14 +6,15 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>TextHelper</Title>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
     <Authors>AdriansRepos</Authors>
     <Description>Knihovna pro validované zadávání vstupů od uživatele v konzolových aplikacích, s automatickým opakováním dotazu při neplatném vstupu.</Description>
     <PackageProjectUrl>https://github.com/AdriansRepos/TextHelper</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/AdriansRepos/TextHelper</RepositoryUrl>
-    <AssemblyVersion>1.2.0</AssemblyVersion>
-    <FileVersion>1.2.0</FileVersion>
+    <AssemblyVersion>1.2.1</AssemblyVersion>
+    <FileVersion>1.2.1</FileVersion>
+    <PackageReleaseNotes>Oprava chybného názvu balíčku v příkazu pro instalaci.</PackageReleaseNotes>
 	  
   </PropertyGroup>
 
